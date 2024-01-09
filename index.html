@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>NORDEK blockchain explorer | Nordek Explorer</title>
+    <link rel="icon" sizes="32x32" type="image/png" href="images/favicon.png">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+
+    <div class="layout has-sidebar fixed-sidebar fixed-header">
+
+        <div class="header d-flex d-md-none align-items-center justify-content-between" style="width: 100%;">
+            <a href="#">
+                <img src="images/header-logo-dark.png" /></a>
+            <a id="btn-toggle" href="#" class="sidebar-toggler break-point-sm">
+                <i class="ri-menu-line ri-xl" style="line-height: 1em;"></i>
+            </a>
+        </div>
+
+        <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+            <a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
+            <div class="sidebar-layout">
+                <div class="sidebar-header">
+                    <div class="pro-sidebar-logo">
+                        <div>
+                            <img src="images/logo_icon.png" />
+                        </div>
+                        <h5 class="mb-0">
+                            <img src="images/logo_text.png" />
+                        </h5>
+                    </div>
+                </div>
+                <div class="sidebar-content">
+                    <nav class="menu open-current-submenu">
+                        <ul>
+                            <li class="menu-header"><span>GENERAL </span></li>
+                            <li class="menu-item sub-menu">
+                                <a href="#">
+                                    <span class="menu-icon">
+                                        <i class="ri-global-line"></i>
+                                    </span>
+                                    <span class="menu-title">Blockchain</span>
+                                </a>
+                                <div class="sub-menu-list">
+                                    <ul>
+                                        <li class="menu-item">
+                                            <a href="Transactions.aspx">
+                                                <span class="menu-title">Transaction</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="Blocks.aspx">
+                                                <span class="menu-title">Blocks</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="Accounts.aspx">
+                                                <span class="menu-title">Top Account</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="verified-contracts.aspx">
+                                                <span class="menu-title">Verified contracts</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <a href="Tokens.aspx">
+                                    <span class="menu-icon">
+                                        <i class="ri-coins-line"></i>
+                                    </span>
+                                    <span class="menu-title">Tokens</span>
+                                    <span class="menu-suffix">
+                                        <span class="badge secondary">Beta</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    <span class="menu-icon">
+                                        <i class="ri-apps-2-fill"></i>
+                                    </span>
+                                    <span class="menu-title">Apps</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    <span class="menu-icon">
+                                        <i class="ri-bar-chart-2-fill"></i>
+                                    </span>
+                                    <span class="menu-title">Charts & Stats</span>
+                                </a>
+                            </li>
+                            <li class="menu-item sub-menu">
+                                <a href="#">
+                                    <span class="menu-icon">
+                                        <i class="ri-server-line"></i>
+                                    </span>
+                                    <span class="menu-title">API</span>
+                                </a>
+                                <div class="sub-menu-list">
+                                    <ul>
+                                        <li class="menu-item">
+                                            <a href="#">
+                                                <span class="menu-title">REST API</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">
+                                                <span class="menu-title">GraphQL</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">
+                                                <span class="menu-title">RPC API</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">
+                                                <span class="menu-title">NRK RPC API</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sidebar-footer">
+                    <div class="footer-box">
+                        <div style="padding: 0 10px">
+                            <span style="display: block; margin-bottom: 10px">Pro sidebar is also available as a react
+                                package
+                            </span>
+                            <div style="margin-bottom: 15px">
+                                <img alt="preview badge"
+                                    src="https://img.shields.io/github/stars/azouaoui-med/react-pro-sidebar?style=social" />
+                            </div>
+                            <div>
+                                <a href="https://github.com/azouaoui-med/react-pro-sidebar" target="_blank">Check it
+                                    out!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div id="overlay" class="overlay"></div>
+
+        <div class="layout">
+
+            <main class="content">
+
+                <div class="banner_cntr">
+                    <div class="banner_content">
+                        <h1 class="mb-0 text-white">Welcome to NORDEK explorer</h1>
+                        <div class="banner_img d-none d-md-block">
+                            <a class="chakra-button" href="https://nordekscan.com/auth/auth0?path=%2F">
+                                <img src="images/user.jpg" alt="user" class="img-fluid rounded-5" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="banner_form">
+                        <div>
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-theme="light"
+                                focusable="false">
+                                <path
+                                    d="m15.026 13.848 2.98 2.978a.834.834 0 1 1-1.18 1.18l-2.978-2.98a7.467 7.467 0 0 1-4.681 1.64c-4.14 0-7.5-3.36-7.5-7.5 0-4.14 3.36-7.5 7.5-7.5 4.14 0 7.5 3.36 7.5 7.5a7.466 7.466 0 0 1-1.641 4.681Zm-1.672-.619A5.814 5.814 0 0 0 15 9.167a5.832 5.832 0 0 0-5.833-5.834 5.831 5.831 0 0 0-5.834 5.834A5.832 5.832 0 0 0 9.167 15a5.814 5.814 0 0 0 4.062-1.646l.125-.125Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            <input placeholder="Search by address / txn hash / block / token... " class="form-control"
+                                value="" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="income_cntr">
+                    <a class="income_box" href="/blocks">
+                        <div class="income_img">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"
+                                focusable="false">
+                                <path
+                                    d="M14.925 3 5 8.653v11.541l7.671 4.47-.037-1.878-6.094-3.568v-8.574l7.596 4.291V25.03l.801.451.827-.45V14.935l7.584-4.292v8.574L17.29 22.71v1.878L25 20.279V8.653L14.925 3Zm0 10.583L7.516 9.217l7.409-4.358 7.587 4.358-7.587 4.366Zm-5.712 4.235 1.484-.845-.126-.221-1.483.845.125.22Zm2.598-1.487 1.484-.845-.126-.22-1.484.845.126.22Zm3.224-3.964v-1.7h-.254v1.7h.254Zm0-2.963v-1.71h-.254v1.71h.254Zm0-2.848V4.847h-.254v1.709h.254Zm3.21 9.564-1.475-.854-.127.22 1.474.854.127-.22Zm2.57 1.487-1.485-.855-.126.22 1.483.855.127-.22ZM6.59 19.317l1.474-.846-.127-.22-1.473.845.126.22Zm16.836-.224-1.473-.855-.128.22 1.474.855.127-.22Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p>Total blocks</p>
+                            <h6>5,198,134</h6>
+                        </div>
+                    </a>
+                    <div class="income_box">
+                        <div class="income_img">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 29 28" focusable="false"
+                                class="chakra-icon css-121oelz">
+                                <g fill="currentColor" clip-path="url(#clock-light_svg__a)">
+                                    <path
+                                        d="M14.75 25.375a11.375 11.375 0 1 1 0-22.75 11.375 11.375 0 0 1 0 22.75Zm0-21a9.625 9.625 0 1 0 0 19.25 9.625 9.625 0 0 0 0-19.25Z">
+                                    </path>
+                                    <path
+                                        d="M19.563 19.688a.875.875 0 0 1-.622-.254L14.13 14.62a.874.874 0 0 1-.254-.621V7a.875.875 0 0 1 1.75 0v6.641l4.559 4.55a.874.874 0 0 1-.622 1.497Z">
+                                    </path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clock-light_svg__a">
+                                        <path fill="#fff" d="M.75 0h28v28h-28z"></path>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div>
+                            <p>Average block time</p>
+                            <h6>5.0 s</h6>
+                        </div>
+                    </div>
+                    <a class="income_box" href="/txs">
+                        <div class="income_img">
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" focusable="false"
+                                class="chakra-icon css-121oelz">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M23.433 12.64a1.212 1.212 0 0 1-.857.354H6.212a1.212 1.212 0 0 1-1.12-.745 1.212 1.212 0 0 1 .266-1.321L8.994 7.29A1.212 1.212 0 0 1 10.704 9L9.14 10.57h13.436a1.212 1.212 0 0 1 .857 2.068ZM7.424 17.236h16.363a1.213 1.213 0 0 1 1.121.745 1.212 1.212 0 0 1-.266 1.321l-3.636 3.637a1.213 1.213 0 1 1-1.71-1.71l1.564-1.569H7.424a1.212 1.212 0 0 1 0-2.424Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p>Total transactions</p>
+                            <h6>874,157</h6>
+                        </div>
+                    </a>
+                    <div class="income_box">
+                        <div class="income_img">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 31 30" focusable="false"
+                                class="chakra-icon css-121oelz">
+                                <g fill="currentColor" clip-path="url(#wallet_svg__a)">
+                                    <path
+                                        d="M22.75 27.188h-15A4.688 4.688 0 0 1 3.062 22.5V9.375A.937.937 0 0 1 4 8.437h18.75a4.688 4.688 0 0 1 4.688 4.688V22.5a4.688 4.688 0 0 1-4.688 4.688ZM4.937 10.313V22.5a2.812 2.812 0 0 0 2.813 2.813h15a2.812 2.812 0 0 0 2.813-2.813v-9.375a2.812 2.812 0 0 0-2.813-2.813H4.937Z">
+                                    </path>
+                                    <path
+                                        d="M24.625 10.312a.937.937 0 0 1-.937-.937V6.797a2.184 2.184 0 0 0-.732-1.754 1.82 1.82 0 0 0-1.565-.3L5.669 8.315a.938.938 0 0 0-.731.938.938.938 0 0 1-1.875 0 2.813 2.813 0 0 1 2.184-2.766l15.731-3.572a3.656 3.656 0 0 1 3.15.666 4.069 4.069 0 0 1 1.435 3.216v2.578a.938.938 0 0 1-.938.937ZM26.5 21.563h-6.563a3.75 3.75 0 1 1 0-7.5H26.5a.938.938 0 0 1 .938.937v5.625a.938.938 0 0 1-.938.938Zm-6.563-5.625a1.875 1.875 0 1 0 0 3.75h5.625v-3.75h-5.625Z">
+                                    </path>
+                                </g>
+                                <defs>
+                                    <clipPath id="wallet_svg__a">
+                                        <path fill="#fff" d="M.25 0h30v30h-30z"></path>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div>
+                            <p>Wallet addresses</p>
+                            <h6>193,972</h6>
+                        </div>
+                    </div>
+                    <div class="income_box">
+                        <div class="income_img">
+                            <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                class="chakra-icon css-121oelz">
+                                <path
+                                    d="M17.5 23.75h1.25v2.5H2.5v-2.5h1.25V5A1.25 1.25 0 0 1 5 3.75h11.25A1.25 1.25 0 0 1 17.5 5v10H20a2.5 2.5 0 0 1 2.5 2.5v5a1.25 1.25 0 0 0 2.5 0v-8.75h-2.5a1.25 1.25 0 0 1-1.25-1.25V8.018l-2.071-2.072 1.767-1.767 6.188 6.187a1.244 1.244 0 0 1 .366.884V22.5a3.75 3.75 0 0 1-7.5 0v-5h-2.5v6.25Zm-11.25 0H15v-7.5H6.25v7.5Zm0-17.5v7.5H15v-7.5H6.25Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p>Gas tracker</p>
+                            <h6>7.26 Gwei</h6>
+                        </div>
+                        <button data-theme="light" type="button" class="chakra-button css-5p2zjj" aria-label="hint">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                focusable="false">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                    fill="currentColor"></path>
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="income_cntr mb-4">
+                    <div class="income_box">
+                        <div class="income_img">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 29 28" focusable="false"
+                                class="chakra-icon css-121oelz">
+                                <g fill="currentColor" clip-path="url(#clock-light_svg__a)">
+                                    <path
+                                        d="M14.75 25.375a11.375 11.375 0 1 1 0-22.75 11.375 11.375 0 0 1 0 22.75Zm0-21a9.625 9.625 0 1 0 0 19.25 9.625 9.625 0 0 0 0-19.25Z">
+                                    </path>
+                                    <path
+                                        d="M19.563 19.688a.875.875 0 0 1-.622-.254L14.13 14.62a.874.874 0 0 1-.254-.621V7a.875.875 0 0 1 1.75 0v6.641l4.559 4.55a.874.874 0 0 1-.622 1.497Z">
+                                    </path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clock-light_svg__a">
+                                        <path fill="#fff" d="M.75 0h28v28h-28z"></path>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div>
+                            <p>Total Staked</p>
+                            <h6>17,805,145.045 NRK</h6>
+                        </div>
+                    </div>
+                    <a class="income_box" href="https://status.nordekscan.com/">
+                        <div class="income_img">
+                            <svg viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                class="chakra-icon css-121oelz">
+                                <path
+                                    d="M5.611 9.642a.374.374 0 0 1-.11.285.4.4 0 0 1-.29.12H.8A.819.819 0 0 1 .3 9.881a.77.77 0 0 1-.283-.43.78.78 0 0 1 .162-.669A6.749 6.749 0 0 1 2.9 6.717a3.859 3.859 0 0 1-1.057-1.514 3.739 3.739 0 0 1-.218-1.813 3.783 3.783 0 0 1 .668-1.707c.36-.51.842-.928 1.405-1.221A4.12 4.12 0 0 1 7.37.402a3.97 3.97 0 0 1 1.448 1.173c.378.498.628 1.075.728 1.685a.37.37 0 0 1-.044.238.389.389 0 0 1-.183.165A6.347 6.347 0 0 0 6.61 5.946a6.033 6.033 0 0 0-.999 3.697Zm18.202-.86a6.745 6.745 0 0 0-2.712-2.065 3.858 3.858 0 0 0 1.056-1.514c.222-.579.297-1.2.22-1.813a3.783 3.783 0 0 0-.669-1.707A3.956 3.956 0 0 0 20.303.462a4.12 4.12 0 0 0-3.673-.06 3.97 3.97 0 0 0-1.448 1.173 3.792 3.792 0 0 0-.728 1.685.369.369 0 0 0 .044.238c.04.073.105.131.183.165a6.347 6.347 0 0 1 2.709 2.282c.659.994 1.01 2.15 1.01 3.33 0 .123 0 .245-.011.367a.374.374 0 0 0 .11.285.4.4 0 0 0 .29.12H23.2c.18 0 .356-.058.498-.166a.77.77 0 0 0 .282-.43.777.777 0 0 0-.163-.67h-.005Zm-8.9 4.17a4.637 4.637 0 0 0 1.673-2.332 4.484 4.484 0 0 0-.046-2.837 4.652 4.652 0 0 0-1.75-2.279 4.918 4.918 0 0 0-2.797-.868 4.918 4.918 0 0 0-2.797.868 4.652 4.652 0 0 0-1.75 2.28 4.483 4.483 0 0 0-.045 2.836 4.637 4.637 0 0 0 1.674 2.331 7.137 7.137 0 0 0-3.369 2.89.752.752 0 0 0 0 .773c.07.117.171.215.293.283.122.067.26.103.4.103h11.202c.14 0 .278-.036.4-.103a.787.787 0 0 0 .293-.283.752.752 0 0 0 0-.773 7.139 7.139 0 0 0-3.375-2.89h-.007Z"
+                                    fill="#fff"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p>Active Validators</p>
+                            <h6>88 validators</h6>
+                        </div>
+                    </a>
+                    <div class="income_box">
+                        <div class="income_img">
+                            <svg viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                class="chakra-icon css-121oelz">
+                                <path
+                                    d="M20 2.25v4.5a.74.74 0 0 1-.225.53.78.78 0 0 1-.544.22h-4.616a.784.784 0 0 1-.427-.127.755.755 0 0 1-.284-.336.733.733 0 0 1 .167-.818l1.635-1.594-1.014-.905-.025-.022a7.754 7.754 0 0 0-3.91-2.047 7.876 7.876 0 0 0-4.42.401A7.659 7.659 0 0 0 2.88 4.768a7.372 7.372 0 0 0-1.342 4.125 7.363 7.363 0 0 0 1.219 4.162 7.642 7.642 0 0 0 3.374 2.812 7.873 7.873 0 0 0 4.405.527 7.768 7.768 0 0 0 3.97-1.935.773.773 0 0 1 .551-.205.788.788 0 0 1 .538.234.746.746 0 0 1 .21.537.734.734 0 0 1-.24.524A9.305 9.305 0 0 1 9.23 18h-.127a9.416 9.416 0 0 1-4.32-1.112 9.145 9.145 0 0 1-3.278-2.96 8.799 8.799 0 0 1-.782-8.42 9.024 9.024 0 0 1 2.68-3.488A9.336 9.336 0 0 1 7.447.17a9.458 9.458 0 0 1 4.463.218 9.28 9.28 0 0 1 3.834 2.236l1.051.938 1.89-1.847a.787.787 0 0 1 .84-.162c.142.057.262.154.346.278.084.124.129.27.128.418Z"
+                                    fill="#fff"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p>Next Cycle</p>
+                            <h6>22h 55m 28s</h6>
+                        </div>
+                    </div>
+                    <div class="income_box">
+                        <div class="income_img">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"
+                                focusable="false" class="chakra-icon css-121oelz">
+                                <path
+                                    d="M14.925 3 5 8.653v11.541l7.671 4.47-.037-1.878-6.094-3.568v-8.574l7.596 4.291V25.03l.801.451.827-.45V14.935l7.584-4.292v8.574L17.29 22.71v1.878L25 20.279V8.653L14.925 3Zm0 10.583L7.516 9.217l7.409-4.358 7.587 4.358-7.587 4.366Zm-5.712 4.235 1.484-.845-.126-.221-1.483.845.125.22Zm2.598-1.487 1.484-.845-.126-.22-1.484.845.126.22Zm3.224-3.964v-1.7h-.254v1.7h.254Zm0-2.963v-1.71h-.254v1.71h.254Zm0-2.848V4.847h-.254v1.709h.254Zm3.21 9.564-1.475-.854-.127.22 1.474.854.127-.22Zm2.57 1.487-1.485-.855-.126.22 1.483.855.127-.22ZM6.59 19.317l1.474-.846-.127-.22-1.473.845.126.22Zm16.836-.224-1.473-.855-.128.22 1.474.855.127-.22Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p>Curent cycle blocks</p>
+                            <h6>5184013 - 5218573</h6>
+                        </div>
+                    </div>
+                    <div class="income_box">
+                        <div style="width: 80px; height: 80px; margin: 0 auto">
+                            <svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar">
+                                <path class="CircularProgressbar-trail"
+                                    style="stroke: #d6d6d6; stroke-linecap: round; transform: rotate(0turn); transform-origin: center center; stroke-dasharray: 289.02652413026095px 289.02652413026095px; stroke-dashoffset: 0px"
+                                    d="
+                  M 50,50
+                  m 0,-46
+                  a 46,46 0 1 1 0,92
+                  a 46,46 0 1 1 0,-92
+                " stroke-width="8" fill-opacity="0">
+                                </path>
+                                <path class="CircularProgressbar-path"
+                                    style="stroke: rgb(62, 152, 199); stroke-linecap: round; transform: rotate(0turn); transform-origin: center center; transition-duration: 0.5s; stroke-dasharray: 289.027px, 289.027px; stroke-dashoffset: 138.733px;"
+                                    d="
+                  M 50,50
+                  m 0,-46
+                  a 46,46 0 1 1 0,92
+                  a 46,46 0 1 1 0,-92
+                " stroke-width="8" fill-opacity="0"></path><text class="CircularProgressbar-text"
+                                    style="fill: white; font-size: 16px" x="35" y="58">52%</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mb-4">
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>Latest blocks</h4>
+                        <div class="mb-4 fw-semibold">Network utilization:&nbsp; <span class="text-primary">0.00%</span>
+                        </div>
+
+                        <div class="Latest_blocks">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        focusable="false" class="" width="20">
+                                        <path
+                                            d="M9.83 0 1 5.03v10.267l6.825 3.976-.034-1.67-5.421-3.175V6.8l6.757 3.818V19.6l.713.4.736-.401v-8.98L17.323 6.8v7.628l-5.388 3.108v1.67l6.858-3.834V5.029L9.829 0Zm0 9.415L3.238 5.531l6.59-3.877 6.75 3.877-6.75 3.884Zm-5.082 3.767 1.32-.752-.112-.196-1.32.752.112.196ZM7.06 11.86l1.32-.752-.113-.196-1.32.752.113.196Zm2.868-3.527V6.821h-.226v1.512h.226Zm0-2.636v-1.52h-.226v1.52h.226Zm0-2.534v-1.52h-.226v1.52h.226Zm2.854 8.51-1.31-.76-.114.195 1.311.76.114-.196Zm2.287 1.322-1.32-.76-.113.195 1.32.76.113-.195Zm-12.654 1.52 1.311-.751-.112-.196-1.311.751.112.196Zm14.979-.198-1.311-.76-.114.195 1.311.76.114-.195Z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                    <a class="fs-5" href="#">
+                                        <h5 class="fw-semibold mb-0">5203992</h5>
+                                    </a>
+                                </div>
+                                <div><span>6s ago</span></div>
+                            </div>
+                            <div class="">
+                                <div class="d-flex align-items-center">
+                                    <div class="w-50">Txn</div>
+                                    <div>0</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="w-50">Reward</div>
+                                    <div>3.3376985615</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="w-50">validator</div>
+                                    <div class="address_text"><a href="/">0xB4...A931</a></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="Latest_blocks">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        focusable="false" class="" width="20">
+                                        <path
+                                            d="M9.83 0 1 5.03v10.267l6.825 3.976-.034-1.67-5.421-3.175V6.8l6.757 3.818V19.6l.713.4.736-.401v-8.98L17.323 6.8v7.628l-5.388 3.108v1.67l6.858-3.834V5.029L9.829 0Zm0 9.415L3.238 5.531l6.59-3.877 6.75 3.877-6.75 3.884Zm-5.082 3.767 1.32-.752-.112-.196-1.32.752.112.196ZM7.06 11.86l1.32-.752-.113-.196-1.32.752.113.196Zm2.868-3.527V6.821h-.226v1.512h.226Zm0-2.636v-1.52h-.226v1.52h.226Zm0-2.534v-1.52h-.226v1.52h.226Zm2.854 8.51-1.31-.76-.114.195 1.311.76.114-.196Zm2.287 1.322-1.32-.76-.113.195 1.32.76.113-.195Zm-12.654 1.52 1.311-.751-.112-.196-1.311.751.112.196Zm14.979-.198-1.311-.76-.114.195 1.311.76.114-.195Z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                    <a class="fs-5" href="#">
+                                        <h5 class="fw-semibold mb-0">5203992</h5>
+                                    </a>
+                                </div>
+                                <div><span>6s ago</span></div>
+                            </div>
+                            <div class="">
+                                <div class="d-flex align-items-center">
+                                    <div class="w-50">Txn</div>
+                                    <div>0</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="w-50">Reward</div>
+                                    <div>3.3376985615</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="w-50">validator</div>
+                                    <div class="address_text"><a href="/">0xB4...A931</a></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="Latest_blocks">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        focusable="false" class="" width="20">
+                                        <path
+                                            d="M9.83 0 1 5.03v10.267l6.825 3.976-.034-1.67-5.421-3.175V6.8l6.757 3.818V19.6l.713.4.736-.401v-8.98L17.323 6.8v7.628l-5.388 3.108v1.67l6.858-3.834V5.029L9.829 0Zm0 9.415L3.238 5.531l6.59-3.877 6.75 3.877-6.75 3.884Zm-5.082 3.767 1.32-.752-.112-.196-1.32.752.112.196ZM7.06 11.86l1.32-.752-.113-.196-1.32.752.113.196Zm2.868-3.527V6.821h-.226v1.512h.226Zm0-2.636v-1.52h-.226v1.52h.226Zm0-2.534v-1.52h-.226v1.52h.226Zm2.854 8.51-1.31-.76-.114.195 1.311.76.114-.196Zm2.287 1.322-1.32-.76-.113.195 1.32.76.113-.195Zm-12.654 1.52 1.311-.751-.112-.196-1.311.751.112.196Zm14.979-.198-1.311-.76-.114.195 1.311.76.114-.195Z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                    <a class="fs-5" href="#">
+                                        <h5 class="fw-semibold mb-0">5203992</h5>
+                                    </a>
+                                </div>
+                                <div><span>6s ago</span></div>
+                            </div>
+                            <div class="">
+                                <div class="d-flex align-items-center">
+                                    <div class="w-50">Txn</div>
+                                    <div>0</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="w-50">Reward</div>
+                                    <div>3.3376985615</div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="w-50">validator</div>
+                                    <div class="address_text"><a href="/">0xB4...A931</a></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <a href="#" class="text-center d-block">View all blocks</a>
+                    </div>
+                    <div class="col-md-9">
+                        <h4>Latest transactions</h4>
+                        <div class="bg-secondary px-3 py-1 rounded-top-3 text-white">scanning new transactions...</div>
+
+                        <div class="css-1q802jm">
+                            <div class="css-o0u6ur">
+                                <div class="css-1h71n9c">
+                                    <div class="d-block d-md-flex mb-4 mb-md-0">
+                                        <button type="button" class="d-none d-md-block"
+                                            style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                    fill="currentColor"></path>
+                                            </svg></button>
+                                        <div class="chakra-popover__popper css-iy22zq"
+                                            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                                            <section tabindex="-1" role="dialog"
+                                                class="chakra-popover__content css-mfjtql"
+                                                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);">
+                                            </section>
+                                        </div>
+                                        <div class="ms-0 ms-md-3">
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <div class="chakra-stack css-1igwmid">
+                                                    <div class="chakra-skeleton css-q157ha light-warning"><span>Token
+                                                            transfer</span></div>
+                                                    <div class="chakra-skeleton css-q157ha light-success">
+                                                        <span
+                                                            class="d-flex align-items-center justify-content-between text-white">
+                                                            <svg viewBox="0 0 10 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                                class="chakra-icon css-t5wc16">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M5 10A5 5 0 1 0 5 0a5 5 0 0 0 0 10Zm2.552-6.652a.625.625 0 0 0-1.083-.625L4.492 6.148l-1.34-.954a.625.625 0 0 0-.725 1.018l1.9 1.353a.625.625 0 0 0 .903-.196l2.322-4.02Z"
+                                                                    fill="currentColor"></path>
+                                                            </svg><span class="css-1ny2kle">Success</span></span>
+                                                    </div>
+                                                </div>
+
+                                                <button type="button" class="d-block d-md-none"
+                                                    style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" focusable="false">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="css-12atx2w d-flex align-items-center justify-content-between">
+                                                <div
+                                                    class="css-u5qnjx d-flex align-items-center justify-content-between">
+                                                    <div class="me-2">
+                                                        <svg viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                            class="chakra-icon css-x1a9kl">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17.77 7.794H.987a.97.97 0 0 1-.549-.17 1.009 1.009 0 0 1-.364-.453 1.041 1.041 0 0 1 .218-1.106l3.722-3.827a.97.97 0 0 1 1.333.06 1.033 1.033 0 0 1 .058 1.37L3.371 5.764H17.77c.262 0 .513.107.698.297a1.031 1.031 0 0 1 0 1.435.973.973 0 0 1-.698.297ZM2.23 12.066h16.783c.195 0 .386.059.549.17.162.11.289.269.364.454a1.042 1.042 0 0 1-.218 1.106l-3.737 3.842-.006.007a.99.99 0 0 1-.711.354.963.963 0 0 1-.736-.296 1.017 1.017 0 0 1-.289-.757 1.04 1.04 0 0 1 .345-.731l.007-.007 2.047-2.112H2.23a.973.973 0 0 1-.698-.298 1.03 1.03 0 0 1-.29-.717c0-.27.105-.527.29-.718a.974.974 0 0 1 .698-.297Z"
+                                                                fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <a class=""
+                                                        href="/tx/0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075">
+                                                        <div class="tooltip">
+                                                            0x43ccb38...c075
+                                                            <span
+                                                                class="tooltiptext">0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div><span>13m ago</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-ydcfbh d-block d-md-grid">
+                                        <div class="d-none d-md-block">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false" class="chakra-icon css-1rccob3">
+                                                <path
+                                                    d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="css-14j82vw d-flex d-md-block align-items-center justify-content-between ms-0 ms-md-1">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="d-block d-md-none">
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    focusable="false" class="chakra-icon css-1rccob3"
+                                                    style="transform: rotate(0deg);">
+                                                    <path
+                                                        d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                        fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAd4f29f3151D0F80636B0aEE8Bdb28c8E2aaFf63">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-0">
+                                        <div class="mb-2"><span>NRK </span><span class="css-9826r4">0</span></div>
+                                        <div><span>Fee </span><span class="css-9826r4">0.00021</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="css-o0u6ur">
+                                <div class="css-1h71n9c">
+                                    <div class="d-block d-md-flex mb-4 mb-md-0">
+                                        <button type="button" class="d-none d-md-block"
+                                            style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                    fill="currentColor"></path>
+                                            </svg></button>
+                                        <div class="chakra-popover__popper css-iy22zq"
+                                            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                                            <section tabindex="-1" role="dialog"
+                                                class="chakra-popover__content css-mfjtql"
+                                                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);">
+                                            </section>
+                                        </div>
+                                        <div class="ms-0 ms-md-3">
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <div class="chakra-stack css-1igwmid">
+                                                    <div class="chakra-skeleton css-q157ha light-warning"><span>Token
+                                                            transfer</span></div>
+                                                    <div class="chakra-skeleton css-q157ha light-success">
+                                                        <span
+                                                            class="d-flex align-items-center justify-content-between text-white">
+                                                            <svg viewBox="0 0 10 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                                class="chakra-icon css-t5wc16">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M5 10A5 5 0 1 0 5 0a5 5 0 0 0 0 10Zm2.552-6.652a.625.625 0 0 0-1.083-.625L4.492 6.148l-1.34-.954a.625.625 0 0 0-.725 1.018l1.9 1.353a.625.625 0 0 0 .903-.196l2.322-4.02Z"
+                                                                    fill="currentColor"></path>
+                                                            </svg><span class="css-1ny2kle">Success</span></span>
+                                                    </div>
+                                                </div>
+
+                                                <button type="button" class="d-block d-md-none"
+                                                    style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" focusable="false">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="css-12atx2w d-flex align-items-center justify-content-between">
+                                                <div
+                                                    class="css-u5qnjx d-flex align-items-center justify-content-between">
+                                                    <div class="me-2">
+                                                        <svg viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                            class="chakra-icon css-x1a9kl">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17.77 7.794H.987a.97.97 0 0 1-.549-.17 1.009 1.009 0 0 1-.364-.453 1.041 1.041 0 0 1 .218-1.106l3.722-3.827a.97.97 0 0 1 1.333.06 1.033 1.033 0 0 1 .058 1.37L3.371 5.764H17.77c.262 0 .513.107.698.297a1.031 1.031 0 0 1 0 1.435.973.973 0 0 1-.698.297ZM2.23 12.066h16.783c.195 0 .386.059.549.17.162.11.289.269.364.454a1.042 1.042 0 0 1-.218 1.106l-3.737 3.842-.006.007a.99.99 0 0 1-.711.354.963.963 0 0 1-.736-.296 1.017 1.017 0 0 1-.289-.757 1.04 1.04 0 0 1 .345-.731l.007-.007 2.047-2.112H2.23a.973.973 0 0 1-.698-.298 1.03 1.03 0 0 1-.29-.717c0-.27.105-.527.29-.718a.974.974 0 0 1 .698-.297Z"
+                                                                fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <a class=""
+                                                        href="/tx/0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075">
+                                                        <div class="tooltip">
+                                                            0x43ccb38...c075
+                                                            <span
+                                                                class="tooltiptext">0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div><span>13m ago</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-ydcfbh d-block d-md-grid">
+                                        <div class="d-none d-md-block">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false" class="chakra-icon css-1rccob3">
+                                                <path
+                                                    d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="css-14j82vw d-flex d-md-block align-items-center justify-content-between ms-0 ms-md-1">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="d-block d-md-none">
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    focusable="false" class="chakra-icon css-1rccob3"
+                                                    style="transform: rotate(0deg);">
+                                                    <path
+                                                        d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                        fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAd4f29f3151D0F80636B0aEE8Bdb28c8E2aaFf63">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-0">
+                                        <div class="mb-2"><span>NRK </span><span class="css-9826r4">0</span></div>
+                                        <div><span>Fee </span><span class="css-9826r4">0.00021</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="css-o0u6ur">
+                                <div class="css-1h71n9c">
+                                    <div class="d-block d-md-flex mb-4 mb-md-0">
+                                        <button type="button" class="d-none d-md-block"
+                                            style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                    fill="currentColor"></path>
+                                            </svg></button>
+                                        <div class="chakra-popover__popper css-iy22zq"
+                                            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                                            <section tabindex="-1" role="dialog"
+                                                class="chakra-popover__content css-mfjtql"
+                                                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);">
+                                            </section>
+                                        </div>
+                                        <div class="ms-0 ms-md-3">
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <div class="chakra-stack css-1igwmid">
+                                                    <div class="chakra-skeleton css-q157ha light-warning"><span>Token
+                                                            transfer</span></div>
+                                                    <div class="chakra-skeleton css-q157ha light-success">
+                                                        <span
+                                                            class="d-flex align-items-center justify-content-between text-white">
+                                                            <svg viewBox="0 0 10 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                                class="chakra-icon css-t5wc16">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M5 10A5 5 0 1 0 5 0a5 5 0 0 0 0 10Zm2.552-6.652a.625.625 0 0 0-1.083-.625L4.492 6.148l-1.34-.954a.625.625 0 0 0-.725 1.018l1.9 1.353a.625.625 0 0 0 .903-.196l2.322-4.02Z"
+                                                                    fill="currentColor"></path>
+                                                            </svg><span class="css-1ny2kle">Success</span></span>
+                                                    </div>
+                                                </div>
+
+                                                <button type="button" class="d-block d-md-none"
+                                                    style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" focusable="false">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="css-12atx2w d-flex align-items-center justify-content-between">
+                                                <div
+                                                    class="css-u5qnjx d-flex align-items-center justify-content-between">
+                                                    <div class="me-2">
+                                                        <svg viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                            class="chakra-icon css-x1a9kl">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17.77 7.794H.987a.97.97 0 0 1-.549-.17 1.009 1.009 0 0 1-.364-.453 1.041 1.041 0 0 1 .218-1.106l3.722-3.827a.97.97 0 0 1 1.333.06 1.033 1.033 0 0 1 .058 1.37L3.371 5.764H17.77c.262 0 .513.107.698.297a1.031 1.031 0 0 1 0 1.435.973.973 0 0 1-.698.297ZM2.23 12.066h16.783c.195 0 .386.059.549.17.162.11.289.269.364.454a1.042 1.042 0 0 1-.218 1.106l-3.737 3.842-.006.007a.99.99 0 0 1-.711.354.963.963 0 0 1-.736-.296 1.017 1.017 0 0 1-.289-.757 1.04 1.04 0 0 1 .345-.731l.007-.007 2.047-2.112H2.23a.973.973 0 0 1-.698-.298 1.03 1.03 0 0 1-.29-.717c0-.27.105-.527.29-.718a.974.974 0 0 1 .698-.297Z"
+                                                                fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <a class=""
+                                                        href="/tx/0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075">
+                                                        <div class="tooltip">
+                                                            0x43ccb38...c075
+                                                            <span
+                                                                class="tooltiptext">0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div><span>13m ago</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-ydcfbh d-block d-md-grid">
+                                        <div class="d-none d-md-block">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false" class="chakra-icon css-1rccob3">
+                                                <path
+                                                    d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="css-14j82vw d-flex d-md-block align-items-center justify-content-between ms-0 ms-md-1">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="d-block d-md-none">
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    focusable="false" class="chakra-icon css-1rccob3"
+                                                    style="transform: rotate(0deg);">
+                                                    <path
+                                                        d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                        fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAd4f29f3151D0F80636B0aEE8Bdb28c8E2aaFf63">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-0">
+                                        <div class="mb-2"><span>NRK </span><span class="css-9826r4">0</span></div>
+                                        <div><span>Fee </span><span class="css-9826r4">0.00021</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="css-o0u6ur">
+                                <div class="css-1h71n9c">
+                                    <div class="d-block d-md-flex mb-4 mb-md-0">
+                                        <button type="button" class="d-none d-md-block"
+                                            style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                    fill="currentColor"></path>
+                                            </svg></button>
+                                        <div class="chakra-popover__popper css-iy22zq"
+                                            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                                            <section tabindex="-1" role="dialog"
+                                                class="chakra-popover__content css-mfjtql"
+                                                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);">
+                                            </section>
+                                        </div>
+                                        <div class="ms-0 ms-md-3">
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <div class="chakra-stack css-1igwmid">
+                                                    <div class="chakra-skeleton css-q157ha light-warning"><span>Token
+                                                            transfer</span></div>
+                                                    <div class="chakra-skeleton css-q157ha light-success">
+                                                        <span
+                                                            class="d-flex align-items-center justify-content-between text-white">
+                                                            <svg viewBox="0 0 10 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                                class="chakra-icon css-t5wc16">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M5 10A5 5 0 1 0 5 0a5 5 0 0 0 0 10Zm2.552-6.652a.625.625 0 0 0-1.083-.625L4.492 6.148l-1.34-.954a.625.625 0 0 0-.725 1.018l1.9 1.353a.625.625 0 0 0 .903-.196l2.322-4.02Z"
+                                                                    fill="currentColor"></path>
+                                                            </svg><span class="css-1ny2kle">Success</span></span>
+                                                    </div>
+                                                </div>
+
+                                                <button type="button" class="d-block d-md-none"
+                                                    style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" focusable="false">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="css-12atx2w d-flex align-items-center justify-content-between">
+                                                <div
+                                                    class="css-u5qnjx d-flex align-items-center justify-content-between">
+                                                    <div class="me-2">
+                                                        <svg viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                            class="chakra-icon css-x1a9kl">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17.77 7.794H.987a.97.97 0 0 1-.549-.17 1.009 1.009 0 0 1-.364-.453 1.041 1.041 0 0 1 .218-1.106l3.722-3.827a.97.97 0 0 1 1.333.06 1.033 1.033 0 0 1 .058 1.37L3.371 5.764H17.77c.262 0 .513.107.698.297a1.031 1.031 0 0 1 0 1.435.973.973 0 0 1-.698.297ZM2.23 12.066h16.783c.195 0 .386.059.549.17.162.11.289.269.364.454a1.042 1.042 0 0 1-.218 1.106l-3.737 3.842-.006.007a.99.99 0 0 1-.711.354.963.963 0 0 1-.736-.296 1.017 1.017 0 0 1-.289-.757 1.04 1.04 0 0 1 .345-.731l.007-.007 2.047-2.112H2.23a.973.973 0 0 1-.698-.298 1.03 1.03 0 0 1-.29-.717c0-.27.105-.527.29-.718a.974.974 0 0 1 .698-.297Z"
+                                                                fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <a class=""
+                                                        href="/tx/0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075">
+                                                        <div class="tooltip">
+                                                            0x43ccb38...c075
+                                                            <span
+                                                                class="tooltiptext">0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div><span>13m ago</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-ydcfbh d-block d-md-grid">
+                                        <div class="d-none d-md-block">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false" class="chakra-icon css-1rccob3">
+                                                <path
+                                                    d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="css-14j82vw d-flex d-md-block align-items-center justify-content-between ms-0 ms-md-1">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="d-block d-md-none">
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    focusable="false" class="chakra-icon css-1rccob3"
+                                                    style="transform: rotate(0deg);">
+                                                    <path
+                                                        d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                        fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAd4f29f3151D0F80636B0aEE8Bdb28c8E2aaFf63">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-0">
+                                        <div class="mb-2"><span>NRK </span><span class="css-9826r4">0</span></div>
+                                        <div><span>Fee </span><span class="css-9826r4">0.00021</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="css-o0u6ur">
+                                <div class="css-1h71n9c">
+                                    <div class="d-block d-md-flex mb-4 mb-md-0">
+                                        <button type="button" class="d-none d-md-block"
+                                            style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                    fill="currentColor"></path>
+                                            </svg></button>
+                                        <div class="chakra-popover__popper css-iy22zq"
+                                            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                                            <section tabindex="-1" role="dialog"
+                                                class="chakra-popover__content css-mfjtql"
+                                                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);">
+                                            </section>
+                                        </div>
+                                        <div class="ms-0 ms-md-3">
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <div class="chakra-stack css-1igwmid">
+                                                    <div class="chakra-skeleton css-q157ha light-warning"><span>Token
+                                                            transfer</span></div>
+                                                    <div class="chakra-skeleton css-q157ha light-success">
+                                                        <span
+                                                            class="d-flex align-items-center justify-content-between text-white">
+                                                            <svg viewBox="0 0 10 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                                class="chakra-icon css-t5wc16">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M5 10A5 5 0 1 0 5 0a5 5 0 0 0 0 10Zm2.552-6.652a.625.625 0 0 0-1.083-.625L4.492 6.148l-1.34-.954a.625.625 0 0 0-.725 1.018l1.9 1.353a.625.625 0 0 0 .903-.196l2.322-4.02Z"
+                                                                    fill="currentColor"></path>
+                                                            </svg><span class="css-1ny2kle">Success</span></span>
+                                                    </div>
+                                                </div>
+
+                                                <button type="button" class="d-block d-md-none"
+                                                    style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" focusable="false">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="css-12atx2w d-flex align-items-center justify-content-between">
+                                                <div
+                                                    class="css-u5qnjx d-flex align-items-center justify-content-between">
+                                                    <div class="me-2">
+                                                        <svg viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                            class="chakra-icon css-x1a9kl">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17.77 7.794H.987a.97.97 0 0 1-.549-.17 1.009 1.009 0 0 1-.364-.453 1.041 1.041 0 0 1 .218-1.106l3.722-3.827a.97.97 0 0 1 1.333.06 1.033 1.033 0 0 1 .058 1.37L3.371 5.764H17.77c.262 0 .513.107.698.297a1.031 1.031 0 0 1 0 1.435.973.973 0 0 1-.698.297ZM2.23 12.066h16.783c.195 0 .386.059.549.17.162.11.289.269.364.454a1.042 1.042 0 0 1-.218 1.106l-3.737 3.842-.006.007a.99.99 0 0 1-.711.354.963.963 0 0 1-.736-.296 1.017 1.017 0 0 1-.289-.757 1.04 1.04 0 0 1 .345-.731l.007-.007 2.047-2.112H2.23a.973.973 0 0 1-.698-.298 1.03 1.03 0 0 1-.29-.717c0-.27.105-.527.29-.718a.974.974 0 0 1 .698-.297Z"
+                                                                fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <a class=""
+                                                        href="/tx/0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075">
+                                                        <div class="tooltip">
+                                                            0x43ccb38...c075
+                                                            <span
+                                                                class="tooltiptext">0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div><span>13m ago</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-ydcfbh d-block d-md-grid">
+                                        <div class="d-none d-md-block">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false" class="chakra-icon css-1rccob3">
+                                                <path
+                                                    d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="css-14j82vw d-flex d-md-block align-items-center justify-content-between ms-0 ms-md-1">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="d-block d-md-none">
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    focusable="false" class="chakra-icon css-1rccob3"
+                                                    style="transform: rotate(0deg);">
+                                                    <path
+                                                        d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                        fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAd4f29f3151D0F80636B0aEE8Bdb28c8E2aaFf63">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-0">
+                                        <div class="mb-2"><span>NRK </span><span class="css-9826r4">0</span></div>
+                                        <div><span>Fee </span><span class="css-9826r4">0.00021</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="css-o0u6ur">
+                                <div class="css-1h71n9c">
+                                    <div class="d-block d-md-flex mb-4 mb-md-0">
+                                        <button type="button" class="d-none d-md-block"
+                                            style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                    fill="currentColor"></path>
+                                            </svg></button>
+                                        <div class="chakra-popover__popper css-iy22zq"
+                                            style="visibility: hidden; position: absolute; min-width: max-content; inset: 0px auto auto 0px;">
+                                            <section tabindex="-1" role="dialog"
+                                                class="chakra-popover__content css-mfjtql"
+                                                style="transform-origin: var(--popper-transform-origin); opacity: 0; visibility: hidden; transform: scale(0.95) translateZ(0px);">
+                                            </section>
+                                        </div>
+                                        <div class="ms-0 ms-md-3">
+                                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                                <div class="chakra-stack css-1igwmid">
+                                                    <div class="chakra-skeleton css-q157ha light-warning"><span>Token
+                                                            transfer</span></div>
+                                                    <div class="chakra-skeleton css-q157ha light-success">
+                                                        <span
+                                                            class="d-flex align-items-center justify-content-between text-white">
+                                                            <svg viewBox="0 0 10 10" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                                class="chakra-icon css-t5wc16">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M5 10A5 5 0 1 0 5 0a5 5 0 0 0 0 10Zm2.552-6.652a.625.625 0 0 0-1.083-.625L4.492 6.148l-1.34-.954a.625.625 0 0 0-.725 1.018l1.9 1.353a.625.625 0 0 0 .903-.196l2.322-4.02Z"
+                                                                    fill="currentColor"></path>
+                                                            </svg><span class="css-1ny2kle">Success</span></span>
+                                                    </div>
+                                                </div>
+
+                                                <button type="button" class="d-block d-md-none"
+                                                    style="width: 1.5rem; height: 1.5rem; background: none; border: none; color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" focusable="false">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M13.034 3H6.965C4.587 3 3 4.703 3 7.141v5.718C3 15.299 4.583 17 6.965 17h6.068C15.416 17 17 15.3 17 12.859V7.14C17 4.701 15.416 3 13.034 3ZM6.965 4.05h6.069c1.785 0 2.916 1.214 2.916 3.091v5.718c0 1.877-1.13 3.091-2.917 3.091H6.966c-1.786 0-2.916-1.214-2.916-3.091V7.14c0-1.874 1.134-3.091 2.915-3.091ZM10 6.818a.525.525 0 0 1 .072 1.045l-.079.005a.525.525 0 0 1-.07-1.045L10 6.818Zm-.007 2.221c.266 0 .486.198.52.454l.005.071v3.093a.525.525 0 0 1-1.045.072l-.005-.072V9.564c0-.29.235-.525.525-.525Z"
+                                                            fill="currentColor"></path>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="css-12atx2w d-flex align-items-center justify-content-between">
+                                                <div
+                                                    class="css-u5qnjx d-flex align-items-center justify-content-between">
+                                                    <div class="me-2">
+                                                        <svg viewBox="0 0 20 20" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                            class="chakra-icon css-x1a9kl">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M17.77 7.794H.987a.97.97 0 0 1-.549-.17 1.009 1.009 0 0 1-.364-.453 1.041 1.041 0 0 1 .218-1.106l3.722-3.827a.97.97 0 0 1 1.333.06 1.033 1.033 0 0 1 .058 1.37L3.371 5.764H17.77c.262 0 .513.107.698.297a1.031 1.031 0 0 1 0 1.435.973.973 0 0 1-.698.297ZM2.23 12.066h16.783c.195 0 .386.059.549.17.162.11.289.269.364.454a1.042 1.042 0 0 1-.218 1.106l-3.737 3.842-.006.007a.99.99 0 0 1-.711.354.963.963 0 0 1-.736-.296 1.017 1.017 0 0 1-.289-.757 1.04 1.04 0 0 1 .345-.731l.007-.007 2.047-2.112H2.23a.973.973 0 0 1-.698-.298 1.03 1.03 0 0 1-.29-.717c0-.27.105-.527.29-.718a.974.974 0 0 1 .698-.297Z"
+                                                                fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <a class=""
+                                                        href="/tx/0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075">
+                                                        <div class="tooltip">
+                                                            0x43ccb38...c075
+                                                            <span
+                                                                class="tooltiptext">0x43ccb3835e82a95ff31a255fa00e279c6f3db1a9c65888bc4b65f3b61e4cc075</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div><span>13m ago</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-ydcfbh d-block d-md-grid">
+                                        <div class="d-none d-md-block">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                focusable="false" class="chakra-icon css-1rccob3">
+                                                <path
+                                                    d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="css-14j82vw d-flex d-md-block align-items-center justify-content-between ms-0 ms-md-1">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                            <div class="d-block d-md-none">
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                    focusable="false" class="chakra-icon css-1rccob3"
+                                                    style="transform: rotate(0deg);">
+                                                    <path
+                                                        d="M13.758 11c.89 0 1.337-1.077.707-1.707l-2.95-2.95a1 1 0 1 1 1.414-1.414l6.364 6.364a1 1 0 0 1 0 1.414l-6.364 6.364a1 1 0 1 1-1.414-1.414l2.95-2.95c.63-.63.184-1.707-.707-1.707H5a1 1 0 1 1 0-2h8.758Z"
+                                                        fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="css-10rwbut me-1 me-md-2">
+                                                    <div class="paper"
+                                                        style="border-radius: 50px; display: inline-block; margin: 0px; overflow: hidden; padding: 0px; background-color: rgb(252, 25, 82); height: 20px; width: 20px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" height="20"
+                                                            width="20">
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(3.335477084472419 0.11869692049270687) rotate(21.9 10 10)"
+                                                                fill="#03495d"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-8.962527548910277 5.117470317924564) rotate(176.8 10 10)"
+                                                                fill="#f3d300"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-16.408159536316848 -3.5646301156964286) rotate(245.9 10 10)"
+                                                                fill="#158bf2"></rect>
+                                                            <rect x="0" y="0" rx="0" ry="0" height="20" width="20"
+                                                                transform="translate(-1.437481576124746 21.866386289798207) rotate(223.8 10 10)"
+                                                                fill="#245ae1"></rect>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <a href="/address/0xAd4f29f3151D0F80636B0aEE8Bdb28c8E2aaFf63">
+                                                    <div class="tooltip">
+                                                        0xAF35...D141
+                                                        <span
+                                                            class="tooltiptext">0xAF35B3440FB72a0e1dAB851B7649DEb9323ED141</span>
+                                                    </div>
+                                                </a>
+                                                <button type="button" class="chakra-button css-y320zf" aria-label="copy"
+                                                    style=" color: var(--text-color);">
+                                                    <svg viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                        focusable="false">
+                                                        <g clip-path="url(#copy_svg__a)">
+                                                            <path
+                                                                d="M8.597 3H1.228C.55 3 0 3.57 0 4.273v8.909h1.228v-8.91h7.369V3Zm1.842 2.545H3.684c-.678 0-1.228.57-1.228 1.273v8.91c0 .702.55 1.272 1.228 1.272h6.755c.678 0 1.228-.57 1.228-1.273V6.818c0-.703-.55-1.273-1.228-1.273Zm0 10.182H3.684V6.818h6.755v8.91Z"
+                                                                fill="currentColor" stroke="currentColor"
+                                                                stroke-width="0.3"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="copy_svg__a">
+                                                                <path d="M0 0h20v20H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-0">
+                                        <div class="mb-2"><span>NRK </span><span class="css-9826r4">0</span></div>
+                                        <div><span>Fee </span><span class="css-9826r4">0.00021</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a href="#" class="text-center d-block view_all">View all transactions</a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="css-1po8bzd">
+            <div class="css-w300dx">
+                <div class="DarkMode_btn mb-2">
+                    <input type="checkbox" id="darkmode-toggle" class="d-none" />
+                    <label for="darkmode-toggle">
+                        <svg version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 496 496"
+                            style="enable-background: new 0 0 496 496;" xml:space="preserve">
+
+                            <rect x="152.994" y="58.921"
+                                transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)" width="40.001"
+                                height="16" />
+                            <rect x="46.9" y="164.979" transform="matrix(0.9239 0.3827 -0.3827 0.9239 71.29 -12.4346)"
+                                width="40.001" height="16" />
+                            <rect x="46.947" y="315.048"
+                                transform="matrix(0.9239 -0.3827 0.3827 0.9239 -118.531 50.2116)" width="40.001"
+                                height="16" />
+
+                            <rect x="164.966" y="409.112"
+                                transform="matrix(-0.9238 -0.3828 0.3828 -0.9238 168.4872 891.7491)" width="16"
+                                height="39.999" />
+
+                            <rect x="303.031" y="421.036"
+                                transform="matrix(-0.3827 -0.9239 0.9239 -0.3827 50.2758 891.6655)" width="40.001"
+                                height="16" />
+
+                            <rect x="409.088" y="315.018"
+                                transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 701.898 785.6559)" width="40.001"
+                                height="16" />
+
+                            <rect x="409.054" y="165.011"
+                                transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 891.6585 168.6574)" width="40.001"
+                                height="16" />
+                            <rect x="315.001" y="46.895"
+                                transform="matrix(0.9238 0.3828 -0.3828 0.9238 50.212 -118.5529)" width="16"
+                                height="39.999" />
+                            <path d="M248,88c-88.224,0-160,71.776-160,160s71.776,160,160,160s160-71.776,160-160S336.224,88,248,88z M248,392
+            c-79.4,0-144-64.6-144-144s64.6-144,144-144s144,64.6,144,144S327.4,392,248,392z" />
+                            <rect x="240" width="16" height="72" />
+                            <rect x="62.097" y="90.096"
+                                transform="matrix(0.7071 0.7071 -0.7071 0.7071 98.0963 -40.6334)" width="71.999"
+                                height="16" />
+                            <rect y="240" width="72" height="16" />
+
+                            <rect x="90.091" y="361.915"
+                                transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -113.9157 748.643)" width="16"
+                                height="71.999" />
+                            <rect x="240" y="424" width="16" height="72" />
+
+                            <rect x="361.881" y="389.915"
+                                transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 397.8562 960.6281)" width="71.999"
+                                height="16" />
+                            <rect x="424" y="240" width="72" height="16" />
+                            <rect x="389.911" y="62.091"
+                                transform="matrix(0.7071 0.7071 -0.7071 0.7071 185.9067 -252.6357)" width="16"
+                                height="71.999" />
+                        </svg>
+                        <svg version="1.1" class="moon" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.739 49.739"
+                            style="enable-background: new 0 0 49.739 49.739;" xml:space="preserve">
+                            <path d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268
+   c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0
+   c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822
+   C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253
+   c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748
+   c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z" />
+                        </svg>
+                    </label>
+                </div>
+            </div>
+            <p class="chakra-text css-9ocica">NORDEK Chain is a Block Explorer and Analytics Platform for NRK, a
+                decentralized smart contracts platform.</p>
+            <div class="chakra-stack css-1jdomq9"></div>
+        </div>
+        <div class="css-1pcvyb">
+            <div class="css-19qldhr">
+                <div class="footer_social">
+                    <a target="_blank" href="">
+                        <div class="">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                class="footer-icon css-13h60r2">
+                                <path
+                                    d="M19.432 3.6 16.4.569A1.925 1.925 0 0 0 15.03 0c-.518 0-1.005.202-1.371.568L.962 13.264a.779.779 0 0 0-.221.446l-.734 5.406a.779.779 0 0 0 .877.877l5.406-.734a.778.778 0 0 0 .446-.221L19.432 6.342c.366-.366.568-.853.568-1.37 0-.518-.202-1.005-.568-1.371ZM5.82 17.75l-4.132.561.561-4.131 8.997-8.997 3.57 3.57L5.82 17.75ZM18.33 5.24l-2.41 2.412-3.571-3.57L14.76 1.67a.379.379 0 0 1 .537 0l3.034 3.032a.378.378 0 0 1 0 .538Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        Submit an issue
+                    </a>
+                    <a target="_blank" href="">
+                        <div class="">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                class="footer-icon css-1gm3tio">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.283 14.602a1.13 1.13 0 0 1 1.231-1.024c.62.057 1.081.608 1.024 1.231a7.455 7.455 0 0 1-7.465 6.79c-4.143 0-7.513-3.357-7.513-7.482V9.883c0-4.126 3.37-7.483 7.513-7.483 3.84 0 7.125 2.981 7.48 6.79a1.132 1.132 0 1 1-2.255.208c-.247-2.653-2.542-4.734-5.225-4.734-2.89 0-5.245 2.343-5.245 5.219v4.234c0 2.879 2.351 5.218 5.245 5.218 2.677 0 4.966-2.077 5.21-4.733ZM8.763 9a3.447 3.447 0 0 1 3.32-2.55c1.562 0 2.93 1.05 3.32 2.559a1.135 1.135 0 0 1-.81 1.382 1.135 1.135 0 0 1-1.382-.81 1.165 1.165 0 0 0-1.132-.867c-.527 0-.99.358-1.129.873a1.133 1.133 0 0 1-1.385.8A1.132 1.132 0 0 1 8.764 9Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        Feature request
+                    </a>
+                    <a target="_blank" href="https://github.com/">
+                        <div class="">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                focusable="false" class="footer-icon css-v5w1at">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.568 13.835c1.948-.23 4.02-.939 4.02-4.304 0-.957-.336-1.737-.885-2.34.089-.23.372-1.097-.106-2.302 0 0-.709-.23-2.374.886a8.582 8.582 0 0 0-2.214-.32 8.37 8.37 0 0 0-2.215.32c-1.683-1.116-2.391-.886-2.391-.886-.478 1.205-.195 2.073-.106 2.303-.55.602-.886 1.382-.886 2.339 0 3.365 2.072 4.074 4.021 4.304-.248.213-.478.62-.567 1.187-.496.212-1.789.62-2.568-.726 0 0-.461-.833-1.329-.886 0 0-.868-.018-.07.531 0 0 .584.266.974 1.276 0 0 .53 1.683 2.975 1.151v1.506c0 .23-.177.496-.62.425a8.751 8.751 0 0 1-5.97-8.308 8.747 8.747 0 0 1 8.752-8.75c4.818 0 8.75 3.914 8.733 8.75a8.768 8.768 0 0 1-5.97 8.308c-.443.089-.62-.177-.62-.425v-2.427c0-.815-.266-1.346-.584-1.612ZM20 10.009C20 4.482 15.518 0 10.009 0 4.482 0 0 4.482 0 10.009 0 15.519 4.482 20 10.009 20 15.519 20 20 15.518 20 10.009Z">
+                                </path>
+                            </svg>
+                        </div>
+                        Contribute
+                    </a>
+                    <a target="_blank" href="https://twitter.com/">
+                        <div class="">
+                            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                class="footer-icon css-v5w1at">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.067 3.928A9.984 9.984 0 0 0 10.997 1 9.983 9.983 0 0 0 3.93 3.928 9.973 9.973 0 0 0 1 11.003a9.969 9.969 0 0 0 2.929 7.069A9.983 9.983 0 0 0 10.998 21a9.984 9.984 0 0 0 7.069-2.928 9.97 9.97 0 0 0 2.928-7.07 9.974 9.974 0 0 0-2.928-7.074Zm-.554 13.59a9.187 9.187 0 0 1-6.516 2.702 9.187 9.187 0 0 1-6.515-2.702 9.175 9.175 0 0 1-2.701-6.515 9.178 9.178 0 0 1 2.7-6.521 9.182 9.182 0 0 1 6.517-2.696 9.181 9.181 0 0 1 6.515 2.696 9.177 9.177 0 0 1 2.701 6.52c0 2.542-1.03 4.85-2.701 6.516Z"
+                                    fill="currentColor" stroke="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.825 7.067c-.404.238-.858.41-1.334.504a2.088 2.088 0 0 0-1.534-.654c-1.151 0-2.093.925-2.093 2.06 0 .166.028.32.061.47a5.945 5.945 0 0 1-4.318-2.153c-.177.31-.287.659-.287 1.035 0 .72.411 1.35.965 1.716-.343-.005-.703-.1-.911-.255v.028c0 .266.014.51.108.742a2.062 2.062 0 0 0 1.522 1.273 2.12 2.12 0 0 1-.563.078 1.91 1.91 0 0 1-.397-.045 2.109 2.109 0 0 0 1.952 1.44c-.72.553-1.618.88-2.598.88-.171 0-.332-.011-.504-.028.93.581 2.031.925 3.21.925 3.272 0 5.283-2.265 5.808-4.617.095-.42.129-.836.129-1.246v-.265a4.167 4.167 0 0 0 1.05-1.069 4.43 4.43 0 0 1-1.196.327c.437-.26.774-.659.93-1.146Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        Twitter
+                    </a>
+                    <a target="_blank" href="">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 15" focusable="false"
+                                class="footer-icon css-v5w1at">
+                                <mask id="discord_svg__a" width="20" height="15" x="0" y="0" fill="#000"
+                                    maskUnits="userSpaceOnUse">
+                                    <path fill="#fff" d="M0 0h20v15H0z"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M18.133 6.988a22.044 22.044 0 0 0-1.62-4.36.295.295 0 0 0-.1-.108 12.246 12.246 0 0 0-2.142-1.008C12.891 1.01 12.238 1 12.211 1a.281.281 0 0 0-.281.242l-.084.586a18.723 18.723 0 0 0-3.696 0l-.084-.586A.281.281 0 0 0 7.785 1c-.027 0-.68 0-2.06.508-.743.267-1.459.607-2.136 1.012a.295.295 0 0 0-.1.108 22.038 22.038 0 0 0-1.62 4.36C1.142 9.924 1 11.393 1 11.454a.281.281 0 0 0 .069.21 7.763 7.763 0 0 0 2.56 1.792c.888.378 1.824.635 2.782.762a.281.281 0 0 0 .27-.14l.76-1.301a14.77 14.77 0 0 0 2.559.21 14.83 14.83 0 0 0 2.559-.213l.76 1.304a.28.28 0 0 0 .241.14h.028a10.73 10.73 0 0 0 2.782-.756 7.76 7.76 0 0 0 2.559-1.792.28.28 0 0 0 .069-.21c.001-.067-.132-1.536-.866-4.472Zm-1.977 5.95c-.785.325-1.606.557-2.446.69l-.574-.983c.659-.175 2.028-.627 3.07-1.575a.283.283 0 0 0-.378-.422c-1.245 1.138-3.097 1.512-3.176 1.528h-.01c-.87.169-1.755.252-2.641.248a13.58 13.58 0 0 1-2.641-.24h-.01c-.02 0-1.905-.37-3.178-1.528a.283.283 0 1 0-.378.422c1.042.948 2.412 1.406 3.07 1.575l-.574.984a10.7 10.7 0 0 1-2.445-.692 7.345 7.345 0 0 1-2.271-1.567c.046-.41.236-1.838.844-4.253a22.03 22.03 0 0 1 1.535-4.168 12.397 12.397 0 0 1 1.969-.916 8.627 8.627 0 0 1 1.628-.449l.05.336c-.563.14-1.948.543-3.045 1.34a.281.281 0 0 0 .332.454c1.23-.894 2.925-1.268 3.07-1.3h.004A16.65 16.65 0 0 1 10 2.304c.682-.003 1.363.036 2.04.118.128.026 1.828.398 3.074 1.3a.281.281 0 1 0 .332-.454c-1.097-.797-2.476-1.198-3.044-1.34l.049-.336a8.68 8.68 0 0 1 1.627.449 12.4 12.4 0 0 1 1.968.916 21.974 21.974 0 0 1 1.547 4.168c.603 2.415.793 3.843.844 4.253a7.345 7.345 0 0 1-2.282 1.56ZM7.36 6.652c-.866 0-1.57.787-1.57 1.755 0 .967.703 1.753 1.57 1.753.868 0 1.57-.786 1.57-1.753 0-.968-.705-1.755-1.57-1.755Zm0 2.953c-.562 0-1.008-.534-1.008-1.191s.451-1.193 1.008-1.193c.557 0 1.007.535 1.007 1.193S7.916 9.598 7.36 9.598v.007Zm3.71-1.198c0-.968.704-1.755 1.57-1.755.865 0 1.57.787 1.57 1.755 0 .967-.705 1.753-1.57 1.753-.867 0-1.57-.786-1.57-1.753Zm.562.007c0 .657.445 1.19 1.007 1.19V9.6c.557 0 1.008-.526 1.008-1.184 0-.658-.452-1.193-1.008-1.193-.555 0-1.007.536-1.007 1.193Z"
+                                        clip-rule="evenodd"></path>
+                                </mask>
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M18.133 6.988a22.044 22.044 0 0 0-1.62-4.36.295.295 0 0 0-.1-.108 12.246 12.246 0 0 0-2.142-1.008C12.891 1.01 12.238 1 12.211 1a.281.281 0 0 0-.281.242l-.084.586a18.723 18.723 0 0 0-3.696 0l-.084-.586A.281.281 0 0 0 7.785 1c-.027 0-.68 0-2.06.508-.743.267-1.459.607-2.136 1.012a.295.295 0 0 0-.1.108 22.038 22.038 0 0 0-1.62 4.36C1.142 9.924 1 11.393 1 11.454a.281.281 0 0 0 .069.21 7.763 7.763 0 0 0 2.56 1.792c.888.378 1.824.635 2.782.762a.281.281 0 0 0 .27-.14l.76-1.301a14.77 14.77 0 0 0 2.559.21 14.83 14.83 0 0 0 2.559-.213l.76 1.304a.28.28 0 0 0 .241.14h.028a10.73 10.73 0 0 0 2.782-.756 7.76 7.76 0 0 0 2.559-1.792.28.28 0 0 0 .069-.21c.001-.067-.132-1.536-.866-4.472Zm-1.977 5.95c-.785.325-1.606.557-2.446.69l-.574-.983c.659-.175 2.028-.627 3.07-1.575a.283.283 0 0 0-.378-.422c-1.245 1.138-3.097 1.512-3.176 1.528h-.01c-.87.169-1.755.252-2.641.248a13.58 13.58 0 0 1-2.641-.24h-.01c-.02 0-1.905-.37-3.178-1.528a.283.283 0 1 0-.378.422c1.042.948 2.412 1.406 3.07 1.575l-.574.984a10.7 10.7 0 0 1-2.445-.692 7.345 7.345 0 0 1-2.271-1.567c.046-.41.236-1.838.844-4.253a22.03 22.03 0 0 1 1.535-4.168 12.397 12.397 0 0 1 1.969-.916 8.627 8.627 0 0 1 1.628-.449l.05.336c-.563.14-1.948.543-3.045 1.34a.281.281 0 0 0 .332.454c1.23-.894 2.925-1.268 3.07-1.3h.004A16.65 16.65 0 0 1 10 2.304c.682-.003 1.363.036 2.04.118.128.026 1.828.398 3.074 1.3a.281.281 0 1 0 .332-.454c-1.097-.797-2.476-1.198-3.044-1.34l.049-.336a8.68 8.68 0 0 1 1.627.449 12.4 12.4 0 0 1 1.968.916 21.974 21.974 0 0 1 1.547 4.168c.603 2.415.793 3.843.844 4.253a7.345 7.345 0 0 1-2.282 1.56ZM7.36 6.652c-.866 0-1.57.787-1.57 1.755 0 .967.703 1.753 1.57 1.753.868 0 1.57-.786 1.57-1.753 0-.968-.705-1.755-1.57-1.755Zm0 2.953c-.562 0-1.008-.534-1.008-1.191s.451-1.193 1.008-1.193c.557 0 1.007.535 1.007 1.193S7.916 9.598 7.36 9.598v.007Zm3.71-1.198c0-.968.704-1.755 1.57-1.755.865 0 1.57.787 1.57 1.755 0 .967-.705 1.753-1.57 1.753-.867 0-1.57-.786-1.57-1.753Zm.562.007c0 .657.445 1.19 1.007 1.19V9.6c.557 0 1.008-.526 1.008-1.184 0-.658-.452-1.193-1.008-1.193-.555 0-1.007.536-1.007 1.193Z"
+                                    clip-rule="evenodd"></path>
+                                <path fill="currentColor"
+                                    d="m16.513 2.628.358-.178-.006-.01-.352.188Zm1.62 4.36.388-.097v-.002l-.388.099Zm-1.72-4.468.217-.336-.006-.004-.006-.004-.205.344ZM14.27 1.512l-.136.376h.002l.134-.376ZM12.211 1l-.004.4h.004V1Zm-.186.068-.26-.303.26.303Zm-.095.174.396.057v-.001l-.396-.056Zm-.084.586-.04.398.381.038.055-.379-.396-.057Zm-3.696 0-.396.057.055.38.38-.039-.039-.398Zm-.084-.586-.396.056.396-.056Zm-.095-.174.26-.303-.26.303ZM7.785 1v.4h.003L7.785 1Zm-2.06.508.135.376h.003l-.139-.376ZM3.588 2.52l-.206-.343-.012.007.218.336Zm-.1.108-.353-.189-.005.011.358.178Zm-1.62 4.36-.388-.1v.003l.388.097ZM1 11.454l.399.035.001-.018v-.017H1Zm.013.112.38-.124-.38.124Zm.056.098-.3.265.004.005.005.005.291-.274Zm2.56 1.792-.16.367.003.001.156-.368Zm2.782.762-.053.397h.008l.008.002.037-.399Zm.27-.14-.345-.202-.002.003.347.199Zm.76-1.301.067-.394-.273-.047-.14.24.345.2Zm2.559.21.001-.4H10l.002.4Zm2.559-.213.346-.201-.14-.24-.274.047.068.394Zm.76 1.304.346-.2-.001-.002-.346.202Zm.101.102.202-.346-.201.346Zm.14.038-.002.4h.002v-.4Zm.028 0v.4h.027l.026-.003-.053-.397Zm2.782-.756.156.368.002-.001-.158-.367Zm2.559-1.792.29.275.006-.005.004-.006-.3-.264Zm.056-.098-.38-.124.38.124Zm.013-.113-.4-.008v.022l.002.022.398-.036Zm-5.289 2.17-.345.201.137.237.271-.043-.063-.395Zm2.446-.692.153.37.006-.003-.16-.367Zm-3.02-.292-.102-.387-.508.134.265.454.345-.201Zm3.07-1.575-.267-.298-.002.002.27.296Zm.067-.089-.361-.173.36.173Zm.027-.107-.4-.022.4.022Zm-.016-.11-.377.134.377-.133Zm-.056-.094.298-.267-.298.267Zm-.088-.067.172-.36-.172.36Zm-.108-.027-.021.4.021-.4Zm-.109.015.133.378-.133-.377Zm-.095.057-.267-.298-.003.003.27.295Zm-3.176 1.528-.079-.392.08.392Zm-.002 0v.4h.04l.04-.008-.08-.392Zm-.008 0v-.4h-.039l-.037.008.075.392ZM10 12.424l.001-.4h-.004l.003.4Zm-2.641-.24.075-.392-.037-.007H7.36v.4Zm-3.187-1.528.27-.296-.002-.002-.268.298Zm-.204-.072-.022-.4.022.4Zm-.196.094-.297-.267.297.267Zm.022.4.27-.296-.003-.002-.267.298Zm3.07 1.575.345.201.267-.457-.513-.131-.1.387Zm-.574.984-.062.396.27.042.138-.236-.346-.202Zm-2.445-.692-.162.367.008.003.154-.37Zm-2.271-1.567-.398-.045-.021.19.134.135.285-.28Zm.844-4.253-.388-.1v.003l.388.097Zm1.535-4.168-.2-.346-.106.061-.053.11.36.175Zm1.969-.916.136.376.007-.003-.143-.373Zm1.628-.449.396-.058-.06-.406-.404.07.068.394Zm.05.336.096.388.352-.088-.053-.358-.396.058Zm-3.045 1.34-.235-.323.236.323Zm-.074.081-.342-.208.342.208Zm-.038.103-.395-.061.395.061Zm.235.321.061-.395-.061.395Zm.11-.004-.095-.39.094.39Zm.099-.047L4.653 3.4h-.001l.236.323Zm3.07-1.3.087.391-.087-.39Zm.004 0-.048-.397-.02.002-.018.004.086.39ZM10 2.304l-.002.4h.003l-.001-.4Zm2.04.118.082-.392-.017-.003-.017-.002-.048.397Zm3.074 1.3.236-.323h-.001l-.235.323Zm.21.051-.062-.395.061.395Zm.234-.321.395-.061-.395.061Zm-.112-.184.236-.323h-.001l-.235.323Zm-3.044-1.34-.396-.058-.053.358.351.088.098-.388Zm.049-.336.068-.394-.405-.07-.06.406.397.058Zm1.627.449-.144.373.007.003.137-.376Zm1.968.916.36-.176-.054-.11-.106-.06-.2.346Zm1.547 4.168.388-.097v-.003l-.388.1Zm.844 4.253.284.281.137-.137-.024-.194-.397.05ZM7.36 9.606v.4h.4v-.4h-.4Zm0-.007v-.4h-.4v.4h.4Zm5.28.007v.4h.4v-.4h-.4Zm0-.007v-.4h-.4v.4h.4Zm3.514-6.793a21.645 21.645 0 0 1 1.59 4.28l.775-.197a22.449 22.449 0 0 0-1.65-4.439l-.715.356Zm.04.05a.105.105 0 0 1-.035-.038l.705-.379a.695.695 0 0 0-.235-.255l-.434.672Zm-2.058-.967c.72.257 1.414.584 2.071.975l.41-.688a12.647 12.647 0 0 0-2.212-1.04l-.27.753ZM12.21 1.4c-.028 0 .578-.001 1.924.488l.273-.752C12.992.62 12.293.6 12.21.6v.8Zm.075-.029a.119.119 0 0 1-.079.029l.008-.8a.681.681 0 0 0-.45.165l.52.606Zm.04-.073a.119.119 0 0 1-.04.073l-.522-.606a.681.681 0 0 0-.23.42l.792.113Zm-.085.587.085-.586-.792-.114-.084.586.792.114Zm-4.051.341a18.358 18.358 0 0 1 3.616 0l.08-.796a19.12 19.12 0 0 0-3.775 0l.079.796ZM7.67 1.3l.084.586.792-.114-.084-.586-.792.114Zm.04.072a.119.119 0 0 1-.04-.073l.792-.112a.681.681 0 0 0-.23-.421l-.522.606Zm.079.029a.119.119 0 0 1-.08-.029l.523-.606A.681.681 0 0 0 7.78.6l.008.8Zm-1.926.483a9.294 9.294 0 0 1 1.473-.426A3.785 3.785 0 0 1 7.78 1.4h.005V.6c-.079 0-.778.01-2.199.532l.277.751Zm-2.07.98c.656-.392 1.348-.72 2.067-.979l-.271-.753c-.767.277-1.506.627-2.206 1.046l.41.686Zm.048-.045a.105.105 0 0 1-.035.038l-.435-.672a.695.695 0 0 0-.235.255l.705.379ZM2.256 7.087a21.65 21.65 0 0 1 1.59-4.28l-.715-.357A22.438 22.438 0 0 0 1.48 6.89l.775.198Zm-.855 4.367c0 .016.005-.059.03-.26.024-.187.064-.462.126-.828.124-.732.339-1.823.7-3.282L1.48 6.89a46.404 46.404 0 0 0-.712 3.34c-.064.377-.105.664-.13.861a4.254 4.254 0 0 0-.037.362h.8Zm-.007-.012a.119.119 0 0 1 .006.047l-.797-.071a.681.681 0 0 0 .03.272l.761-.248ZM1.37 11.4c.011.012.02.027.024.042l-.76.248a.68.68 0 0 0 .136.239l.6-.529Zm2.418 1.689a7.362 7.362 0 0 1-2.427-1.7l-.582.55a8.16 8.16 0 0 0 2.692 1.884l.317-.734Zm2.677.733a10.328 10.328 0 0 1-2.68-.734l-.312.736c.922.392 1.893.658 2.886.79l.106-.792Zm-.082.01a.119.119 0 0 1 .066-.012l-.074.796a.682.682 0 0 0 .378-.074l-.37-.71Zm-.048.047a.12.12 0 0 1 .048-.046l.37.71a.681.681 0 0 0 .276-.267l-.694-.397Zm.761-1.304-.76 1.3.692.404.759-1.3-.691-.404Zm2.903.011a14.377 14.377 0 0 1-2.49-.204l-.135.79c.869.147 1.748.219 2.629.214l-.004-.8Zm2.493-.206a14.38 14.38 0 0 1-2.49.206l-.003.8c.88.004 1.76-.069 2.628-.218l-.135-.788Zm1.173 1.496-.76-1.303-.69.402.759 1.304.69-.403Zm-.042-.042c.018.01.032.026.043.043l-.693.4a.68.68 0 0 0 .247.249l.402-.692Zm-.06-.016a.12.12 0 0 1 .06.016l-.403.692a.68.68 0 0 0 .339.092l.005-.8Zm.026 0h-.028v.8h.028v-.8Zm2.626-.725c-.856.362-1.757.607-2.678.729l.104.793c.993-.13 1.963-.395 2.886-.785l-.312-.737Zm2.424-1.698a7.364 7.364 0 0 1-2.427 1.7l.317.734a8.163 8.163 0 0 0 2.692-1.884l-.582-.55Zm-.033.053a.118.118 0 0 1 .024-.042l.6.528a.681.681 0 0 0 .136-.238l-.76-.248Zm-.006.047a.118.118 0 0 1 .006-.047l.76.248a.682.682 0 0 0 .031-.273l-.796.072Zm-.855-4.41c.364 1.458.579 2.55.702 3.281a19.276 19.276 0 0 1 .147 1.04c.006.061.005.065.005.045l.8.017a1.4 1.4 0 0 0-.009-.137 20.03 20.03 0 0 0-.154-1.098 44.227 44.227 0 0 0-.715-3.342l-.776.194Zm-3.972 6.939c.87-.138 1.722-.38 2.536-.717l-.307-.74c-.756.315-1.546.538-2.355.667l.126.79Zm-.982-1.178.574.984.69-.402-.573-.985-.691.403Zm3.146-2.072c-.97.882-2.264 1.315-2.903 1.484l.205.773c.678-.18 2.122-.652 3.236-1.665l-.538-.592Zm-.025.034a.118.118 0 0 1 .027-.036l.534.595a.684.684 0 0 0 .16-.213l-.721-.346Zm-.012.044a.116.116 0 0 1 .012-.044l.721.346a.682.682 0 0 0 .066-.258l-.799-.044Zm.007.046a.117.117 0 0 1-.007-.046l.8.044a.682.682 0 0 0-.038-.264l-.755.266Zm.023.039a.116.116 0 0 1-.023-.04l.755-.265a.682.682 0 0 0-.136-.23l-.596.535Zm.037.027a.116.116 0 0 1-.037-.027l.596-.534a.684.684 0 0 0-.213-.16l-.346.721Zm.044.011a.116.116 0 0 1-.044-.011l.345-.721a.682.682 0 0 0-.258-.066l-.043.798Zm.045-.006a.117.117 0 0 1-.045.006l.043-.798a.682.682 0 0 0-.264.037l.266.755Zm.039-.023a.116.116 0 0 1-.04.023l-.265-.755a.684.684 0 0 0-.23.136l.535.596Zm-3.363 1.622c.08-.016 2.032-.405 3.366-1.625l-.54-.59c-1.156 1.057-2.907 1.415-2.985 1.43l.159.785Zm-.002 0h.002l-.16-.784h-.002l.16.784Zm-.088.008h.008v-.8h-.008v.8Zm-2.643.248a13.98 13.98 0 0 0 2.718-.255l-.152-.785a13.19 13.19 0 0 1-2.563.24l-.003.8Zm-2.714-.246c.896.17 1.807.253 2.719.246l-.006-.8a13.19 13.19 0 0 1-2.563-.232l-.15.786Zm.066.007h.009v-.8h-.01v.8Zm-3.447-1.633c.69.627 1.531 1.03 2.188 1.277a8.823 8.823 0 0 0 1.083.328 3.754 3.754 0 0 0 .114.023l.014.002a.32.32 0 0 0 .048.003v-.8a.381.381 0 0 1 .047.003l.011.001h.005a.634.634 0 0 1-.066-.013 8.056 8.056 0 0 1-.975-.296c-.61-.229-1.347-.589-1.93-1.12l-.539.592Zm.087.032a.117.117 0 0 1-.085-.03l.535-.596a.683.683 0 0 0-.494-.173l.044.799Zm.08-.039a.117.117 0 0 1-.08.039l-.044-.8a.684.684 0 0 0-.471.227l.595.534Zm.03-.084a.117.117 0 0 1-.03.084l-.595-.534a.683.683 0 0 0-.174.493l.799-.043Zm-.039-.08c.023.02.037.049.039.08l-.799.043c.01.181.091.351.226.472l.534-.596Zm2.902 1.485c-.634-.163-1.929-.6-2.9-1.484l-.538.592c1.113 1.013 2.557 1.492 3.24 1.666l.198-.774Zm-.327 1.573.574-.985-.692-.402-.573.984.69.403Zm-2.945-.524c.814.339 1.666.58 2.537.718l.125-.79A10.3 10.3 0 0 1 4 12.575l-.308.739ZM1.29 11.658a7.745 7.745 0 0 0 2.394 1.654l.323-.732a6.944 6.944 0 0 1-2.147-1.483l-.57.561Zm.74-4.63c-.611 2.431-.804 3.878-.853 4.305l.795.09c.045-.392.231-1.803.834-4.2l-.775-.195Zm1.565-4.246A22.372 22.372 0 0 0 2.03 7.026l.775.199a21.572 21.572 0 0 1 1.508-4.092l-.72-.351Zm2.191-1.117a12.84 12.84 0 0 0-2.032.946l.4.693a12 12 0 0 1 1.905-.887l-.273-.752Zm1.697-.467a8.93 8.93 0 0 0-1.704.47l.287.746a8.227 8.227 0 0 1 1.553-.428l-.136-.788Zm.513.672-.05-.336-.79.116.049.336.791-.116ZM4.791 3.592c1.033-.75 2.356-1.138 2.906-1.276l-.194-.776c-.574.144-2.021.56-3.182 1.405l.47.647Zm.032-.035a.119.119 0 0 1-.031.034l-.472-.646a.681.681 0 0 0-.18.196l.683.416Zm.016-.043a.119.119 0 0 1-.016.043l-.683-.416a.681.681 0 0 0-.091.25l.79.123Zm-.021-.089a.119.119 0 0 1 .021.089l-.79-.123a.681.681 0 0 0 .123.506l.646-.472Zm-.078-.047a.119.119 0 0 1 .078.047l-.646.472a.681.681 0 0 0 .445.271l.123-.79Zm-.046.002a.119.119 0 0 1 .046-.002l-.123.79a.7.7 0 0 0 .266-.01l-.19-.778Zm-.042.02a.119.119 0 0 1 .042-.02l.189.777a.681.681 0 0 0 .24-.112l-.47-.645Zm3.22-1.368c-.145.032-1.915.419-3.22 1.367l.471.647c1.156-.84 2.775-1.2 2.922-1.233l-.173-.781Zm.004 0h-.004l.173.781h.003l-.172-.782Zm2.126-.128a17.049 17.049 0 0 0-2.088.12l.095.795A16.25 16.25 0 0 1 10 2.704l.003-.8Zm2.087.12a16.943 16.943 0 0 0-2.09-.12l.003.8a16.14 16.14 0 0 1 1.991.115l.096-.794Zm3.26 1.374c-1.32-.956-3.093-1.34-3.226-1.368l-.164.783c.123.026 1.75.384 2.921 1.233l.47-.648Zm-.086-.02a.119.119 0 0 1 .088.021l-.472.646a.679.679 0 0 0 .507.123l-.123-.79Zm-.078.047a.119.119 0 0 1 .078-.047l.123.79a.681.681 0 0 0 .445-.27l-.646-.473Zm-.021.089a.119.119 0 0 1 .021-.089l.646.472a.681.681 0 0 0 .123-.506l-.79.123Zm.047.077a.118.118 0 0 1-.047-.077l.79-.123a.681.681 0 0 0-.271-.446l-.472.646Zm-2.906-1.275c.557.14 1.874.525 2.907 1.276l.47-.647c-1.161-.844-2.602-1.26-3.183-1.405l-.194.776Zm-.25-.782-.048.336.791.116.05-.336-.792-.116Zm2.167.133a9.083 9.083 0 0 0-1.702-.47l-.137.79c.53.091 1.05.234 1.552.427l.287-.747Zm2.025.944a12.796 12.796 0 0 0-2.032-.946l-.273.752c.66.24 1.297.536 1.905.887l.4-.693Zm1.734 4.414a22.376 22.376 0 0 0-1.575-4.244l-.718.353a21.572 21.572 0 0 1 1.519 4.092l.774-.201Zm.854 4.303c-.053-.423-.245-1.867-.853-4.3l-.776.194c.599 2.397.786 3.81.835 4.205l.794-.098Zm-2.52 1.976a7.745 7.745 0 0 0 2.407-1.645l-.568-.563a6.946 6.946 0 0 1-2.158 1.474l.32.734ZM6.191 8.408c0-.79.566-1.355 1.17-1.355v-.8c-1.127 0-1.97 1.01-1.97 2.155h.8ZM7.36 9.76c-.606 0-1.17-.564-1.17-1.353h-.8c0 1.146.841 2.153 1.97 2.153v-.8Zm1.17-1.353c0 .79-.564 1.353-1.17 1.353v.8c1.13 0 1.97-1.008 1.97-2.153h-.8ZM7.36 7.053c.603 0 1.17.565 1.17 1.355h.8c0-1.145-.843-2.155-1.97-2.155v.8ZM5.953 8.415c0 .81.563 1.59 1.408 1.59v-.8c-.28 0-.608-.287-.608-.79h-.8Zm1.408-1.593c-.838 0-1.408.781-1.408 1.593h.8c0-.502.333-.793.608-.793v-.8Zm1.407 1.593c0-.813-.568-1.593-1.407-1.593v.8c.275 0 .607.29.607.793h.8ZM7.361 9.999c.834 0 1.407-.767 1.407-1.584h-.8c0 .5-.33.784-.607.784v.8Zm.4-.393v-.007h-.8v.007h.8Zm4.88-3.353c-1.127 0-1.97 1.01-1.97 2.155h.8c0-.79.566-1.355 1.17-1.355v-.8Zm1.97 2.155c0-1.146-.843-2.155-1.97-2.155v.8c.604 0 1.17.565 1.17 1.355h.8Zm-1.97 2.153c1.126 0 1.97-1.007 1.97-2.153h-.8c0 .789-.566 1.353-1.17 1.353v.8Zm-1.97-2.153c0 1.145.841 2.153 1.97 2.153v-.8c-.605 0-1.17-.564-1.17-1.353h-.8Zm1.97.798c-.28 0-.608-.288-.608-.791h-.8c0 .81.562 1.59 1.407 1.59v-.8Zm-.4.393v.007h.8v-.007h-.8Zm1.007-1.184c0 .499-.329.784-.608.784v.8c.835 0 1.408-.767 1.408-1.584h-.8Zm-.608-.793c.275 0 .608.29.608.793h.8c0-.814-.572-1.593-1.408-1.593v.8Zm-.607.793c0-.502.334-.793.607-.793v-.8c-.837 0-1.407.782-1.407 1.593h.8Z"
+                                    mask="url(#discord_svg__a)"></path>
+                            </svg>
+                        </div>
+                        Discord
+                    </a>
+                    <a target="_blank" href="">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" focusable="false"
+                                class="footer-icon css-1gm3tio">
+                                <path fill="currentColor"
+                                    d="M13.76 7.444h2.88a5.76 5.76 0 0 1 0 11.52v2.52c-3.6-1.44-8.64-3.6-8.64-8.28a5.76 5.76 0 0 1 5.76-5.76Zm1.44 10.08h1.44a4.32 4.32 0 1 0 0-8.64h-2.88a4.32 4.32 0 0 0-4.32 4.32c0 2.6 1.772 4.296 5.76 6.106v-1.786Z">
+                                </path>
+                                <path fill="currentColor"
+                                    d="M10.4 3.444H7.2a6.32 6.32 0 0 0-4.526 1.923A6.65 6.65 0 0 0 .8 10.008c0 1.741.674 3.41 1.874 4.642A6.32 6.32 0 0 0 7.2 16.572v2.872c4-1.64 9.6-4.102 9.6-9.436a6.65 6.65 0 0 0-1.875-4.641A6.32 6.32 0 0 0 10.4 3.444ZM8.8 14.931H7.2c-.63 0-1.255-.127-1.837-.374a4.793 4.793 0 0 1-1.557-1.068c-.446-.457-.8-1-1.04-1.597a5.033 5.033 0 0 1 0-3.768 4.933 4.933 0 0 1 1.04-1.597c.445-.457.975-.82 1.557-1.067A4.696 4.696 0 0 1 7.2 5.085h3.2a4.74 4.74 0 0 1 3.394 1.442 4.988 4.988 0 0 1 1.406 3.481c0 2.962-1.97 4.895-6.4 6.958v-2.035Z">
+                                </path>
+                            </svg>
+                        </div>
+                        Discussions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/custome.js"></script>
+
+    <script>
+        let dark_mode = document.querySelector("#darkmode-toggle");
+        let body = document.querySelector("body");
+        let check = 0;
+        dark_mode.addEventListener("click", () => {
+            if (check === 0) {
+                body.classList.add("dark");
+                check = 1;
+            } else {
+                body.classList.remove("dark");
+                check = 0;
+            }
+        })
+    </script>
+
+
+
+
+    <script src="assets/plugins/global/plugins.bundle.js"></script>
+    <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+    <script src="assets/js/Custom.js"></script>
+
+
+</body>
+
+</html>

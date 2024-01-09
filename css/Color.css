@@ -1,0 +1,35 @@
+﻿.light-success {
+    background: #f0fff4;
+    color: #38a169;
+}
+.dark .light-success {
+    background: rgba(154, 230, 180, 0.16);
+    color: #9ae6b4;
+}
+
+.light-warning {
+    background: #fffaf0;
+    color: #dd6b20;
+}
+.dark .light-warning {
+    background: rgba(251, 211, 141, 0.16);
+    color: #fbd38d;
+}
+
+.light-primary {
+    background: #d9f4fe;
+    color: #3182ce;
+}
+.dark .light-primary {
+    background: rgba(144, 205, 244, 0.16);
+    color: #90cdf4;
+}
+
+.light-danger {
+    background: #fff5f5;
+    color: #e53e3e;
+}
+.dark .light-danger {
+    background: rgba(254, 178, 178, 0.16);
+    color: #feb2b2;
+}
